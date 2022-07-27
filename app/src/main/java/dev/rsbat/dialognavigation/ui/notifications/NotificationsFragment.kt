@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import dev.rsbat.dialognavigation.R
 import dev.rsbat.dialognavigation.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
@@ -31,6 +33,11 @@ class NotificationsFragment : Fragment() {
         val textView: TextView = binding.textNotifications
         notificationsViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
+        }
+
+        val navController = findNavController()
+        binding.btnNotifications.setOnClickListener {
+            navController.navigate(R.id.notifications_to_next)
         }
         return root
     }

@@ -21,7 +21,16 @@
         android:id="@+id/navigation_notifications"
         android:name="dev.rsbat.dialognavigation.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+        <action android:id="@+id/notifications_to_next"
+            app:destination="@id/navigation_next"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_next"
+        android:name="dev.rsbat.dialognavigation.NextFragment"
+        android:label="Next"
+        tools:layout="@layout/fragment_dashboard" />
 
     <dialog
         android:id="@+id/showDialog"
