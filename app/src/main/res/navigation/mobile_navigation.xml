@@ -22,4 +22,8 @@
         android:name="dev.rsbat.dialognavigation.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <dialog
+        android:id="@+id/showDialog"
+        android:name="dev.rsbat.dialognavigation.MyDialog" />
 </navigation>
