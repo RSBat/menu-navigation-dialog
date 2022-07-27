@@ -44,7 +44,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return item.onNavDestinationSelected(navController) ||
-                super.onOptionsItemSelected(item)
+        if (item.itemId == R.id.showDialog) {
+            navController.navigate(R.id.toDialog)
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

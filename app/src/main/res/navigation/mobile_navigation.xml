@@ -5,6 +5,10 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+    <action
+        android:id="@+id/toDialog"
+        app:destination="@id/showDialog"/>
+
     <fragment
         android:id="@+id/navigation_home"
         android:name="dev.rsbat.dialognavigation.ui.home.HomeFragment"
